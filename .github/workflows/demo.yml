@@ -10,13 +10,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container: ${{ matrix.container }}
-      strategy:
-        fail-fast: false
-        matrix:
-          include:
-            - container: ghcr.io/oca/oca-ci/py3.6-odoo12.0:latest
-              makepot: "true"
-            - container: ghcr.io/oca/oca-ci/py3.6-ocb12.0:latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - container: ghcr.io/oca/oca-ci/py3.6-odoo12.0:latest
+            makepot: "true"
+          - container: ghcr.io/oca/oca-ci/py3.6-ocb12.0:latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
