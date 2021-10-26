@@ -8,7 +8,7 @@ on:
       - "12.0*"
 jobs:
   test:
-    runs-on: debian-latest
+    runs-on: ubuntu-latest
     # container: ${{ matrix.container }}
     #    strategy:
     #      fail-fast: false
